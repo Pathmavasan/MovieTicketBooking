@@ -1,0 +1,24 @@
+<div class="container">
+
+<div class="row" *ngFor="let movie of moviedetail">
+  <div class="col-md-4">
+    <iframe width="560" height="315" [src]="safeurl"></iframe>
+  </div>
+
+  <div class="col-md-8">
+    <h1 class="movie-title">{{movie.Name}}</h1>
+    <p class="movie-info">{{movie.MovieType}}</p>
+    <div class="rating">
+    <h3><b>
+          <i class="fa-solid fa-star" style="color:#f7f406;font-size:1em;"></i>
+          <span>{{movie.Ratting}}</span>
+          </b></h3>
+          </div>
+    <p class="movie-description"> {{movie.About}}</p>
+    <div >
+ <button class="btn-primary" [routerLink]="['/seat']" routerLinkActive="router-link-active"
+ >Book Now</button>
+    </div>
+  </div>
+</div>
+</div>

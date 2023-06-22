@@ -1,0 +1,12 @@
+
+<div class="seat-container">
+  <div class="screen">Screen</div>
+  <div class="seat-row" *ngFor="let row of seatsByRow">
+    <div *ngFor="let seat of row" [ngClass]="{'seat': true, 'reserved': seat.reserved, 'selected': isSelected(seat.id)  }"
+      (click)="toggleSeatSelection(seat.id)">
+      <div *ngIf="seat==5" class="space"></div>
+      {{ seat.id }}
+    </div>
+  </div>
+</div>
+<button [disabled]="selectedSeats.length === 0"  (click)="reserveSelectedSeats()"  class="Payment">Book Ticket</button>

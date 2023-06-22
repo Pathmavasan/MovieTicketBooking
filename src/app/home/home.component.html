@@ -1,0 +1,23 @@
+
+<div class="cont" >
+  <div class="row" >
+  <div class="column" *ngFor="let moviedata of moviedata">
+      <div class="card" ><div class="poster">
+        <img src="{{moviedata.Image}}" alt="{{moviedata.Name }} Poster">
+        </div>
+        <div class="details" >
+          <h4>
+            <b>{{ moviedata.Name }}</b>
+          </h4>
+          <div class="rating">
+          <i class="fa-solid fa-star"></i>
+          <span>{{moviedata.Ratting}}</span>
+          </div>
+          <button id="readmore" ><a [routerLink]="['/moviedetails']" [queryParams]="{ value: [moviedata.Name] }"
+            routerLinkActive="router-link-active">Read More</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>

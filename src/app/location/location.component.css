@@ -1,0 +1,66 @@
+.location-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-popup {
+  background-color: black;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+/* location-popup.component.css */
+.location-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color:black;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 9999; /* Increase the z-index value to ensure the popup appears above other elements */
+}
+
+.location-popup h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.location-popup ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.location-popup li {
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.location-popup li:hover {
+  background-color: #c95e5e;
+}
+
+.location-popup li:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.location-popup li:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.location-popup li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}

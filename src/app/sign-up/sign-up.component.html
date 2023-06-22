@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class='login' id='login'>
+    <div class="form">
+  <form [formGroup]="registerForm" (submit)="submitForm()">
+    <div class="form-group">
+
+      <input type="text" name="username" class='text' placeholder="Username" formControlName='username' required minlength="4">
+    </div>
+    <div class="error" *ngIf="registerForm.controls['username'].invalid&&registerForm.controls['username'].touched">
+      <small *ngIf="registerForm.controls['username'].errors?.['required']">Username is required</small>
+      <small *ngIf="registerForm.controls['username'].errors?.['minlength']">Username must contain more than 3 characters</small>
+    </div>
+    <div class="form-group">
+
+      <input type="tel" name="mobileno" class='text' placeholder="Mobile number" formControlName="mobileno" required pattern="((\\+91-?)\0)?[0-9]{10}$">
+    </div>
+    <div class="error" *ngIf="registerForm.controls['mobileno'].invalid&&registerForm.controls['mobileno'].touched">
+      <small *ngIf="registerForm.controls['mobileno'].errors?.['required']">Mobile number is required</small>
+      <small *ngIf="registerForm.controls['mobileno'].errors?.['pattern']">Mobile number is in valid</small>
+    </div>
+    <div class="form-group">
+
+      <input type="email" name="emailid" class='text' placeholder="Email"  formControlName="emailid" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}">
+    </div>
+    <div class="error" *ngIf="registerForm.controls['emailid'].invalid&&registerForm.controls['emailid'].touched">
+      <small *ngIf="registerForm.controls['emailid'].errors?.['required']">EmailId is required</small>
+      <small *ngIf="registerForm.controls['emailid'].errors?.['pattern']">Enter valid EmailId </small>
+    </div>
+    <div class="form-group">
+
+      <input type="password" name="password" class='password' placeholder="password" formControlName="password" required minlength="8" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*()]).{8,16}$">
+    </div>
+    <div class="error" *ngIf="registerForm.controls['password'].invalid&&registerForm.controls['password'].touched">
+      <small *ngIf="registerForm.controls['password'].errors?.['required']">Password is required</small>
+      <small *ngIf="registerForm.controls['password'].errors?.['minlength']">Password must contain atleast 8 characters atmost 16 characters</small>
+      <small *ngIf="registerForm.controls['password'].errors?.['pattern']">Password must contain one uppercase one Lowercase and Special characters</small>
+    </div>
+    <button class='btn-login' id='do-login' [disabled]="!registerForm.valid">Register</button><label id="lab">Already user...?</label><a class="cta"class='btn-login' id='do-login' role="button" routerLink="/login"> Login</a>
+  </form>
+  </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class='login' id='login'>
+    <div class="form">
+  <form [formGroup]="addForm" (submit)="addMovieForm()">
+    <div class="form-group">
+
+      <input type="text" name="MovieName" class='text' placeholder="Movie Name" formControlName='MovieName' required >
+    </div>
+    <div class="error" *ngIf="addForm.controls['MovieName'].invalid&&addForm.controls['MovieName'].touched">
+      <small *ngIf="addForm.controls['MovieName'].errors?.['required']">Username is required</small>
+    </div>
+    <div class="form-group">
+
+      <input type="text" name="Type" class='text' placeholder="Genre" formControlName="Type" required >
+    </div>
+    <div class="error" *ngIf="addForm.controls['Type'].invalid&&addForm.controls['Type'].touched">
+      <small *ngIf="addForm.controls['Type'].errors?.['required']">Genre is required</small>
+
+    </div>
+    <div class="form-group">
+
+      <input type="text" name="Image" class='text' placeholder="Image URL"  formControlName="Image" required >
+    </div>
+    <div class="error" *ngIf="addForm.controls['Image'].invalid&&addForm.controls['Image'].touched">
+      <small *ngIf="addForm.controls['Image'].errors?.['required']">Iamge url is required</small>
+
+    </div><div class="form-group">
+
+      <input type="text" name="About" class='text' placeholder="Description" formControlName="About" required >
+    </div>
+    <div class="error" *ngIf="addForm.controls['About'].invalid&&addForm.controls['About'].touched">
+      <small *ngIf="addForm.controls['About'].errors?.['required']">Description is required</small>
+
+    </div>
+    <div class="form-group">
+
+      <input type="text" name="Ratting" class='text' placeholder="Ratting number" formControlName="Ratting" required >
+    </div>
+    <div class="error" *ngIf="addForm.controls['Ratting'].invalid&&addForm.controls['Ratting'].touched">
+      <small *ngIf="addForm.controls['Type'].errors?.['Ratting']">Ratting is required</small>
+
+    </div>
+    <div class="form-group">
+
+      <input type="text" name="vedio" class='text' placeholder="vedio" formControlName="vedio" required >
+    </div>
+    <div class="error" *ngIf="addForm.controls['vedio'].invalid&&addForm.controls['vedio'].touched">
+      <small *ngIf="addForm.controls['vedio'].errors?.['required']">vedio is required</small>
+    </div>
+
+    <button class='btn-login' id='do-login' [disabled]="!addForm.valid">Add Movie</button>
+  </form>
+  </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<table>
+    <thead >
+        <tr>
+            <td scope="col">S.No</td>
+            <td scope="col">Name</td>
+            <td scope="col">Ratting</td>
+            <td scope="col">About</td>
+            <td scope="col">Gener</td>
+            <td scope="col"></td>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let item of Moviedata">
+          <td scope="row" >{{item.id}}</td>
+            <td scope="row" >{{item.Name}}</td>
+            <td scope="row" >{{item.Ratting}}</td>
+            <td scope="row" class="about">{{item.About}}</td>
+            <td scope="row" >{{item.Type}}</td>
+            <td><span (click)="DeleteMovie(item.id)" class="delete">Delete</span></td>
+        </tr>
+    </tbody>
+</table>

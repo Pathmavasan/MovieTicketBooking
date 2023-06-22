@@ -1,0 +1,6 @@
+<div class="location-popup">
+  <h2>Choose a location:</h2>
+  <ul>
+    <li *ngFor="let location of locations" (click)="selectLocation(location)">{{ location.name }}</li>
+  </ul>
+</div>
