@@ -15,7 +15,7 @@ import { DeletemovieComponent } from './admin/deletemovie/deletemovie.component'
 import { LocationComponent } from './location/location.component';
 import { SeatComponent } from './seat/seat.component';
 import { PaymentComponent } from './payment/payment.component';
-import { CancelcartComponent } from './cancelcart/cancelcart.component';
+import { CancelcartComponent } from './cart/cancelcart.component';
 
 
 @NgModule({

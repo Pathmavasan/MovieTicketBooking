@@ -3,6 +3,7 @@
   <span *ngFor="let seat of seatid" class="seat" >{{seat}}  </span>
   <h2 >Payment Rs:{{Price}}</h2>
 </div>
+<div class="paymentdetail">
 <div class="payment">
   <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
     <div>
@@ -37,4 +38,5 @@
     </div>
     <button type="submit">Submit</button>
   </form>
+</div>
 </div>

@@ -46,7 +46,6 @@ constructor(private router:Router,public registerService:RegisterService){
 
   }
   calculateRemainingTime() {
-    // Calculate remaining time until offer ends
     const currentDate = new Date();
     const remainingTimeInMillis = this.offerEnd.getTime() - currentDate.getTime();
 
