@@ -53,7 +53,9 @@ updateMovie(Name:any,body:any){
 deleteMovie(body:any){
   return this.client.delete(`${this.MovieUrl}/${body}`);
 }
-
+GetBookedMovie(body:any){
+return this.client.get("http://localhost:3000/payment?username="+body);
+}
 logoutuser(){
 
    sessionStorage.clear();

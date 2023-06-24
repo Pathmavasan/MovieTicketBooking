@@ -17,7 +17,9 @@ safeurl:any=''
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.receivedValue = params['value'];
+      sessionStorage.setItem('moviename',this.receivedValue);
     });
+
     this.registerService.GetMoviebyName(this.receivedValue).subscribe((data)=>{
       this.moviedetail=data;
       this.moviedetail.find((vedioUrl:any)=>this.vediourl=vedioUrl.vedio)

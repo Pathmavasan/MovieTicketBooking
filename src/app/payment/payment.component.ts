@@ -14,11 +14,14 @@ export class PaymentComponent {
 
   constructor(private route:ActivatedRoute,private registerService:RegisterService,private router:Router,private dataservice:DataserviceService,private formBuilder: FormBuilder){
     this.seatid = this.dataservice.getSelectedSeats();
+    this.paymentForm.patchValue({
+      selectedseats: this.seatid
+    });
   }
   receivedValue:any[]=[];
   seatid:any[]=[];
-  Price:any=0;
-  seatprice:any;
+  currentdata=new Date();
+  Price:any=sessionStorage.getItem('price1');
   ngOnInit() {
 
 }
@@ -27,25 +30,14 @@ paymentForm = this.formBuilder.group({
   expirationDate: ['', [Validators.required]],
   cvv: ['', [Validators.required, Validators.pattern(/^\d{3}$/)]],
   cardHolderName: ['', Validators.required],
-  Price:sessionStorage.getItem("price"),
-  username:sessionStorage.getItem('id')
+  Price:this.Price,
+  username:sessionStorage.getItem('id'),
+  MovieName:sessionStorage.getItem('moviename'),
+  selectedseats:this.seatid,
+  Time:this.currentdata.toLocaleString(),
+
 });
-Totalamount(){
-  let price=0;
-  for(let i:number=0;i<this.seatid.length;i++) {
-    if(this.seatid[i]>0&&this.seatid[i]<=20){
-      price=price+200;
-    }
-    else if(this.seatid[i]>20&&this.seatid[i]<=80){
-      price=price+400;
-    }
-    else if(this.seatid[i]>80&&this.seatid[i]<=100){
-      price=price+600;
-    }
-  }
-  this.Price=price;
-  return this.Price;
-}
+
 onSubmit() {
   if (this.paymentForm.invalid) {
     return;

@@ -12,6 +12,7 @@ import { LocationComponent } from './location/location.component';
 import { LocationGarurdGuard } from 'src/location-garurd.guard';
 import { SeatComponent } from './seat/seat.component';
 import { PaymentComponent } from './payment/payment.component';
+import { CancelcartComponent } from './cancelcart/cancelcart.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'sign-up',component:SignUpComponent},
  {path:'moviedetails',component:MoviedetailsComponent},
+ {path:'cancelcart',component:CancelcartComponent},
  {path:'admin/addmovie',component:AddmovieComponent},
  {path:'admin/deletemovie',component:DeletemovieComponent},
  {path:'admin/updatemovie',component:UpdatemovieComponent}

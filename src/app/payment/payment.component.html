@@ -1,8 +1,7 @@
 <div>
 <div class="seatdata"><h2>Selected seats: </h2>
   <span *ngFor="let seat of seatid" class="seat" >{{seat}}  </span>
-  <h2 *ngIf="Price!=null">Payment Rs:{{Totalamount()}}</h2>
-  <h2 *ngIf="Price==null">Payment Rs:{{Price}}</h2>
+  <h2 >Payment Rs:{{Price}}</h2>
 </div>
 <div class="payment">
   <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
