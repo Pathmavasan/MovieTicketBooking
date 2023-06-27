@@ -65,16 +65,17 @@ logoutuser(){
    sessionStorage.clear();
    this.router.navigate(["/home"]);
 }
-getSeats(): Observable<any> {
-  return this.client.get<any>("http://localhost:3000/seat");
+getSeats(body:any): Observable<any> {
+  const url="http://localhost:3000";
+  return this.client.get<any>(`${url}/${body}`);
 }
 getSelectedSeat(body:any){
   return this.client.get("http://localhost:3000/seat?id="+body);
 }
 
-reserveSeat(seatId: number): Observable<any> {
-
-  const updateUrl = `${"http://localhost:3000/seat"}/${seatId}`;
+reserveSeat(date:any,seatId: number): Observable<any> {
+  const url=`${"http://localhost:3000"}/${date}`
+  const updateUrl = `${url}/${seatId}`;
   return this.client.patch<any>(updateUrl, { reserved: true });
 }
 unreserveSeat(seatId: number): Observable<any> {

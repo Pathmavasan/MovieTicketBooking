@@ -22,11 +22,13 @@ export class SeatComponent {
   constructor(private registerService: RegisterService,private router:Router,private dataservice:DataserviceService) { }
 
   ngOnInit() {
-    this.registerService.getSeats().subscribe(seats => {
+
+  }
+  fetchData(){
+    this.registerService.getSeats(this.ShowDate).subscribe(seats => {
       this.seats = seats;
     });
   }
-
   get seatsByRow() {
     const seatsByRow: any[][] = [];
     const rows = [...new Set(this.seats.map(seat => seat.row))];

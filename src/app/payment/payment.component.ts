@@ -75,7 +75,7 @@ onSubmit() {
 
   alert("Payment Done");
   this.seatid.forEach((seatId: number)=>{
-  this.registerService.reserveSeat(seatId).subscribe((res)=>{
+  this.registerService.reserveSeat(sessionStorage.getItem('ShowDate'),seatId).subscribe((res)=>{
     console.log("reseved seat"+res.id);
   })})
   this.registerService.processPayment(this.paymentForm.value).subscribe(res => {
