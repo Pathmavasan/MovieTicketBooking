@@ -9,7 +9,6 @@ import { AddmovieComponent } from './admin/addmovie/addmovie.component';
 import { DeletemovieComponent } from './admin/deletemovie/deletemovie.component';
 import { UpdatemovieComponent } from './admin/updatemovie/updatemovie.component';
 import { LocationComponent } from './location/location.component';
-import { LocationGarurdGuard } from 'src/location-garurd.guard';
 import { SeatComponent } from './seat/seat.component';
 import { PaymentComponent } from './payment/payment.component';
 import { CancelcartComponent } from './cart/cancelcart.component';
@@ -25,7 +24,7 @@ const routes: Routes = [
  {path:'moviedetails',component:MoviedetailsComponent},
  {path:'cart',component:CancelcartComponent},
  {path:'addmovie',component:AddmovieComponent},
- {path:'admin/deletemovie',component:DeletemovieComponent},
+ {path:'deletemovie',component:DeletemovieComponent},
  {path:'updatemovie',component:UpdatemovieComponent}
 
 ];

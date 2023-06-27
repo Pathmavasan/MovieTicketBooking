@@ -7,7 +7,7 @@
   <h1 id="logo">{{Title}}</h1>
   <input type="text" placeholder="Search Movie" name="search"  id="search">
   <div class="flash-message" id="flash-message" [@fadeOut]="visible ? 'visible' : 'void'" (@fadeOut.done)="onAnimationEnd()">
-    <p>50% off on ticket, Till 11.59</p>
+    <p>50% off on your ticket, Right time for your Experiance</p>
   </div>
   <div class="timer-container" *ngIf="remainingTime">
     <p class="timer-text">Discount Percentage: {{ discountPercentage }}%</p>

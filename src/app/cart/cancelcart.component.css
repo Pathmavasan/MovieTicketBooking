@@ -1,0 +1,30 @@
+button {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color:steelblue;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top:20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.seat{
+  background-color: red;
+  border-radius: 5px;
+  margin:2px;
+  padding:10px;
+}
+.cart {
+  max-width: 400px;
+
+  margin:20px auto 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}

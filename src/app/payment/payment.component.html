@@ -1,7 +1,14 @@
-<div>
-<div class="seatdata"><h2>Selected seats: </h2>
+<div class="conatiner">
+<div class="seatdata">
+  <h3>Movie Name: {{MovieName}}</h3>
+  <h3>Show Date: {{Date}}</h3>
+  <h3>Show Time: {{MovieTime}}</h3>
+  <h3>Selected seats: </h3>
   <span *ngFor="let seat of seatid" class="seat" >{{seat}}  </span>
-  <h2 >Payment Rs:{{Price}}</h2>
+  <h2 *ngIf="!remainingTime">Payment Rs:{{Price}}</h2>
+  <span *ngIf="remainingTime">
+    <h3>Original Price:<s style="color:red">{{Price}}</s></h3>
+    <h3>Discont Price:{{remainingTime.price}}</h3></span>
 </div>
 <div class="paymentdetail">
 <div class="payment">

@@ -1,6 +1,6 @@
 .payment {
   max-width: 400px;
-  margin: 0 auto;
+
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -58,4 +58,20 @@ button[type="submit"]:hover {
   color: red;
   font-size: 12px;
   margin-top: 5px;
+}
+.conatiner{
+  margin-top: 10px;
+  display:flex;
+  margin-bottom: 10px;
+
+}
+.seatdata{
+  flex:1em;
+
+}
+.paymentdetail{
+  flex:2em;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
 }

@@ -1,4 +1,21 @@
-
+<div class="dptcontainer">
+<span class="dpt"><h3>Select Show Date:</h3>
+  <select class="dropdown" [(ngModel)]="ShowDate">
+    <option value="26/06/2023">26/06/2023</option>
+    <option value="27/06/2023">27/06/2023</option>
+    <option value="28/06/2023">28/06/2023</option>
+    <option value="29/06/2023">29/06/2023</option>
+  </select>
+  </span>
+<span class="dpt"><h3>Select Show Timing:</h3>
+<select class="dropdown" [(ngModel)]="ShowTiming">
+  <option value="9.00">9.00</option>
+  <option value="14.00">14.00</option>
+  <option value="18.00">18.00</option>
+  <option value="22.00">22.00</option>
+</select>
+</span>
+</div>
 <div class="seat-container">
   <div class="screen">Screen</div>
   <div class="seat-row" *ngFor="let row of seatsByRow">

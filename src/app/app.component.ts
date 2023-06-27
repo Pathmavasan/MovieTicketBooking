@@ -3,6 +3,7 @@ import { Component,HostBinding, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { interval } from 'rxjs/internal/observable/interval';
 import { RegisterService } from 'src/register.service';
+import { TimerService } from './Service/timer.service';
 
 @Component({
   selector: 'app-root',
@@ -27,11 +28,11 @@ Search: any="";
   @Input()
   message!: string;
   visible: boolean = true;
-  offerEnd: Date = new Date('2023-06-22T15:31:59'); // Replace with your offer end date
+  offerEnd: Date = new Date('2023-06-26T09:34:59');
   discountPercentage: number=50;
   remainingTime: any='';
 
-constructor(private router:Router,public registerService:RegisterService){
+constructor(private router:Router,public registerService:RegisterService,public timer:TimerService){
 
 }
 

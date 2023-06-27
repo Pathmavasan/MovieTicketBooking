@@ -69,59 +69,25 @@
   ],
   "payment": [
     {
-      "cardNumber": "0987654321123456",
+      "cardNumber": "1828127812782811",
       "expirationDate": "2023-06",
       "cvv": "111",
-      "cardHolderName": "Pathmavasan",
-      "Price": "2000",
-      "username": "Vasu",
-      "MovieName": "Transformers: Rise of the Beasts",
-      "selectedseats": [
-        7,
-        28,
-        47,
-        68,
-        87
-      ],
-      "Time": 1687514801080,
-      "id": 1
-    },
-    {
-      "cardNumber": "1234567890098765",
-      "expirationDate": "2023-06",
-      "cvv": "111",
-      "cardHolderName": "111",
-      "Price": "2000",
+      "cardHolderName": "qwqwq",
+      "Price": "2400",
       "username": "Vasu",
       "MovieName": "Por Thozhil",
       "selectedseats": [
-        8,
-        27,
-        48,
-        67,
-        88
+        3,
+        23,
+        42,
+        43,
+        63,
+        83
       ],
-      "Time": 15,
-      "Date": 23,
-      "id": 2
-    },
-    {
-      "cardNumber": "1234567890098765",
-      "expirationDate": "2023-06",
-      "cvv": "111",
-      "cardHolderName": "12",
-      "Price": "2000",
-      "username": "Vasu",
-      "MovieName": "Por Thozhil",
-      "selectedseats": [
-        30,
-        9,
-        49,
-        89,
-        70
-      ],
-      "Time": "6/23/2023, 3:48:30 PM",
-      "id": 3
+      "Time": "6/26/2023, 9:45:33 PM",
+      "ShowTime": "2.00 PM",
+      "ShowDate": "28/06/2023",
+      "id": 4
     }
   ],
   "seat": [
@@ -140,7 +106,7 @@
       "price": 200
     },
     {
-      "reserved": false,
+      "reserved": true,
       "row": 1,
       "column": 3,
       "id": 3,
@@ -168,21 +134,21 @@
       "price": 200
     },
     {
-      "reserved": true,
+      "reserved": false,
       "id": 7,
       "row": 1,
       "column": 7,
       "price": 200
     },
     {
-      "reserved": true,
+      "reserved": false,
       "id": 8,
       "row": 1,
       "column": 8,
       "price": 200
     },
     {
-      "reserved": true,
+      "reserved": false,
       "id": 9,
       "row": 1,
       "column": 9,
@@ -283,7 +249,7 @@
       "id": 23,
       "row": 2,
       "column": 3,
-      "reserved": false,
+      "reserved": true,
       "price": 200
     },
     {
@@ -311,14 +277,14 @@
       "id": 27,
       "row": 2,
       "column": 7,
-      "reserved": true,
+      "reserved": false,
       "price": 200
     },
     {
       "id": 28,
       "row": 2,
       "column": 8,
-      "reserved": true,
+      "reserved": false,
       "price": 200
     },
     {
@@ -332,7 +298,7 @@
       "id": 30,
       "row": 2,
       "column": 10,
-      "reserved": true,
+      "reserved": false,
       "price": 200
     },
     {
@@ -422,7 +388,7 @@
       "id": 43,
       "row": 3,
       "column": 3,
-      "reserved": false,
+      "reserved": true,
       "price": 400
     },
     {
@@ -450,21 +416,21 @@
       "id": 47,
       "row": 3,
       "column": 7,
-      "reserved": true,
+      "reserved": false,
       "price": 400
     },
     {
       "id": 48,
       "row": 3,
       "column": 8,
-      "reserved": true,
+      "reserved": false,
       "price": 400
     },
     {
       "id": 49,
       "row": 3,
       "column": 9,
-      "reserved": true,
+      "reserved": false,
       "price": 400
     },
     {
@@ -562,7 +528,7 @@
       "id": 63,
       "row": 4,
       "column": 3,
-      "reserved": false,
+      "reserved": true,
       "price": 400
     },
     {
@@ -590,14 +556,14 @@
       "id": 67,
       "row": 4,
       "column": 7,
-      "reserved": true,
+      "reserved": false,
       "price": 400
     },
     {
       "id": 68,
       "row": 4,
       "column": 8,
-      "reserved": true,
+      "reserved": false,
       "price": 400
     },
     {
@@ -611,7 +577,7 @@
       "id": 70,
       "row": 4,
       "column": 10,
-      "reserved": true,
+      "reserved": false,
       "price": 400
     },
     {
@@ -702,7 +668,7 @@
       "id": 83,
       "row": 5,
       "column": 3,
-      "reserved": false,
+      "reserved": true,
       "price": 600
     },
     {
@@ -730,21 +696,21 @@
       "id": 87,
       "row": 5,
       "column": 7,
-      "reserved": true,
+      "reserved": false,
       "price": 600
     },
     {
       "id": 88,
       "row": 5,
       "column": 8,
-      "reserved": true,
+      "reserved": false,
       "price": 600
     },
     {
       "id": 89,
       "row": 5,
       "column": 9,
-      "reserved": true,
+      "reserved": false,
       "price": 600
     },
     {

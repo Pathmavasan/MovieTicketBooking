@@ -16,13 +16,14 @@ export class SeatComponent {
   selectedSeats: number[] = [];
   selected:any='';
    seatid:any[]=[];
+   ShowTiming: string='';
+   ShowDate:string='';
  price=0;
   constructor(private registerService: RegisterService,private router:Router,private dataservice:DataserviceService) { }
 
   ngOnInit() {
     this.registerService.getSeats().subscribe(seats => {
       this.seats = seats;
-
     });
   }
 
@@ -52,9 +53,7 @@ export class SeatComponent {
 
     this.selectedSeats.forEach(seatId => {
 
-      this.registerService.reserveSeat(seatId).subscribe((res)=>{
-        console.log("reseved seat"+res.id);
-      })
+
         seatid.push(seatId);
 
 
@@ -70,6 +69,9 @@ export class SeatComponent {
   sessionStorage.setItem('price1',this.price.toString());
       this.dataservice.setSelectedSeats(seatid)
       this.router.navigate(['/payment'] );
+      sessionStorage.setItem('Timing',this.ShowTiming);
+      sessionStorage.setItem('ShowDate',this.ShowDate);
+
     });
 
 

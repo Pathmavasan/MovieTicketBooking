@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class RegisterService {
   baseUrl="http://localhost:3000/Register";
   MovieUrl="http://localhost:3000/Movie";
+  PaymentURL="http://localhost:3000/payment"
   constructor(private client:HttpClient,private router:Router) { }
 GetAll(){
   return this.client.get(this.baseUrl);
@@ -56,6 +57,9 @@ deleteMovie(body:any){
 GetBookedMovie(body:any){
 return this.client.get("http://localhost:3000/payment?username="+body);
 }
+deletecart(body:any){
+  return this.client.delete(`${this.PaymentURL}/${body}`);
+}
 logoutuser(){
 
    sessionStorage.clear();
@@ -72,5 +76,10 @@ reserveSeat(seatId: number): Observable<any> {
 
   const updateUrl = `${"http://localhost:3000/seat"}/${seatId}`;
   return this.client.patch<any>(updateUrl, { reserved: true });
+}
+unreserveSeat(seatId: number): Observable<any> {
+
+  const updateUrl = `${"http://localhost:3000/seat"}/${seatId}`;
+  return this.client.patch<any>(updateUrl, { reserved: false });
 }
 }
