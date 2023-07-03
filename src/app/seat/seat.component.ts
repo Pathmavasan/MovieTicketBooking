@@ -18,15 +18,20 @@ export class SeatComponent {
    seatid:any[]=[];
    ShowTiming: string='';
    ShowDate:string='';
+   MovieName:string='';
+   Movieid=sessionStorage.getItem('moviename');
  price=0;
   constructor(private registerService: RegisterService,private router:Router,private dataservice:DataserviceService) { }
 
   ngOnInit() {
-
+    console.log(this.router.url)
+    const rouer=sessionStorage.setItem('target','/payment')
   }
   fetchData(){
-    this.registerService.getSeats(this.ShowDate).subscribe(seats => {
+    this.registerService.getSeats(this.Movieid,this.ShowDate,this.ShowTiming).subscribe(seats => {
       this.seats = seats;
+      sessionStorage.setItem('Timing',this.ShowTiming);
+      sessionStorage.setItem('ShowDate',this.ShowDate);
     });
   }
   get seatsByRow() {
@@ -71,8 +76,8 @@ export class SeatComponent {
   sessionStorage.setItem('price1',this.price.toString());
       this.dataservice.setSelectedSeats(seatid)
       this.router.navigate(['/payment'] );
-      sessionStorage.setItem('Timing',this.ShowTiming);
-      sessionStorage.setItem('ShowDate',this.ShowDate);
+      alert(`Seat number [${this.dataservice.getSelectedSeats()}] booked on Date:${sessionStorage.getItem('ShowDate')}  Time:${sessionStorage.getItem('Timing')} Movie:${sessionStorage.getItem('moviename')}`);
+
 
     });
 

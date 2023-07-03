@@ -26,7 +26,8 @@
     </div>
     <div class="form-group">
 
-      <input type="text" name="Image" class='text' placeholder="Image URL"  formControlName="Image" required >
+      <input type="text" name="Image" class='text' placeholder="Image URL or uploadImage"  formControlName="Image"  >
+      <input type="file" formControlName="Image" >
     </div>
     <div class="error" *ngIf="addForm.controls['Image'].invalid&&addForm.controls['Image'].touched">
       <small *ngIf="addForm.controls['Image'].errors?.['required']">Iamge url is required</small>
@@ -41,7 +42,7 @@
     </div>
     <div class="form-group">
 
-      <input type="text" name="Ratting" class='text' placeholder="Ratting number" formControlName="Ratting" required >
+      <input type="text" name="Rating" class='text' placeholder="Rating number" formControlName="Ratting" required >
     </div>
     <div class="error" *ngIf="addForm.controls['Ratting'].invalid&&addForm.controls['Ratting'].touched">
       <small *ngIf="addForm.controls['Type'].errors?.['Ratting']">Ratting is required</small>
@@ -49,13 +50,13 @@
     </div>
     <div class="form-group">
 
-      <input type="text" name="vedio" class='text' placeholder="vedio" formControlName="vedio" required >
+      <input type="text" name="video" class='text' placeholder="Video" formControlName="vedio" required >
     </div>
     <div class="error" *ngIf="addForm.controls['vedio'].invalid&&addForm.controls['vedio'].touched">
       <small *ngIf="addForm.controls['vedio'].errors?.['required']">vedio is required</small>
     </div>
 
-    <button class='btn-login' id='do-login' [disabled]="!addForm.valid">Add Movie</button>
+    <button class='btn-login' id='do-login' [disabled]="!addForm.valid" >Add Movie</button>
   </form>
   </div>
   </div>

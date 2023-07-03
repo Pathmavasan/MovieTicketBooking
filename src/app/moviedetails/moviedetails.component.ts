@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { RegisterService } from 'src/register.service';
 
@@ -13,10 +13,14 @@ export class MoviedetailsComponent implements OnInit{
 moviedetail:any='';
 vediourl:any='';
 safeurl:any=''
-  constructor(private route: ActivatedRoute,private registerService:RegisterService,private safe:DomSanitizer) {}
+  constructor(private route: ActivatedRoute,private registerService:RegisterService,private safe:DomSanitizer,private router:Router) {}
   ngOnInit() {
+    const url=this.router.url;
+    console.log(url);
+    const rouer=sessionStorage.setItem('target',url);
     this.route.queryParams.subscribe(params => {
       this.receivedValue = params['value'];
+      console.log(sessionStorage.getItem('moviename'),sessionStorage.getItem('ShowDate'),sessionStorage.getItem('Timing'))
       sessionStorage.setItem('moviename',this.receivedValue);
     });
 

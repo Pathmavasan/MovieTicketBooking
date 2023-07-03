@@ -18,11 +18,9 @@ export class AuthGuard implements CanActivate {
         return true;
       }
     else{
-      const navigationExtras: NavigationExtras = {
-        queryParams: { 'redirectUrl': state.url } // Store the original URL as a query parameter
-      };
+
       alert("Not logedin yet login to continue")
-      this.rourt.navigate(['login'],navigationExtras)
+      this.rourt.navigate(['login'])
       return false;
     }
   }

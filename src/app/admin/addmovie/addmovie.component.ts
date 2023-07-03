@@ -17,7 +17,7 @@ export class AddmovieComponent {
   addForm=this.fb.group({
     MovieName:this.fb.control('',[Validators.required]),
     Type:this.fb.control('',[Validators.required]),
-    Image:this.fb.control('',[Validators.required,]),
+    Image:this.fb.control(''),
     About:this.fb.control('',[Validators.required]),
     Ratting:this.fb.control('',[Validators.required]),
     vedio:this.fb.control('',[Validators.required])

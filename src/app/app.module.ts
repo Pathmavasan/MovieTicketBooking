@@ -16,7 +16,7 @@ import { LocationComponent } from './location/location.component';
 import { SeatComponent } from './seat/seat.component';
 import { PaymentComponent } from './payment/payment.component';
 import { CancelcartComponent } from './cart/cancelcart.component';
-
+import { PopupmessageComponent } from './popupmessage/popupmessage.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +32,7 @@ import { CancelcartComponent } from './cart/cancelcart.component';
     SeatComponent,
     PaymentComponent,
     CancelcartComponent,
+    PopupmessageComponent,
 
 
   ],
@@ -42,7 +43,7 @@ import { CancelcartComponent } from './cart/cancelcart.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -28,7 +28,7 @@ Search: any="";
   @Input()
   message!: string;
   visible: boolean = true;
-  offerEnd: Date = new Date('2023-06-26T09:34:59');
+
   discountPercentage: number=50;
   remainingTime: any='';
 
@@ -44,11 +44,11 @@ constructor(private router:Router,public registerService:RegisterService,public 
     interval(1000).subscribe(() => {
       this.calculateRemainingTime();
     });
-
+    const offerEnd=this.registerService.offerEnd;
   }
   calculateRemainingTime() {
     const currentDate = new Date();
-    const remainingTimeInMillis = this.offerEnd.getTime() - currentDate.getTime();
+    const remainingTimeInMillis = this.registerService.offerEnd.getTime() - currentDate.getTime();
 
     if (remainingTimeInMillis > 0) {
       const seconds = Math.floor(remainingTimeInMillis / 1000) % 60;

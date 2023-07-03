@@ -13,10 +13,10 @@ export class LoginComponent {
   User: String="";
   id:any='';
   constructor(private fb:FormBuilder,private registerService:RegisterService,private router:Router){
-sessionStorage.clear();
+
   }
   userdata:any="";
-
+ targeturl:any=sessionStorage.getItem('target');
   loginForm=this.fb.group(
     {
       username:this.fb.control('',[Validators.required,Validators.minLength(4)]),
@@ -29,17 +29,18 @@ sessionStorage.clear();
       this.registerService.Getbycode(this.loginForm.value.username).subscribe(res=>{
         this.userdata=res;
         const user=this.userdata.find((data:any)=>data.username===this.loginForm.value.username&&data.password===this.loginForm.value.password);
-        const userid=this.userdata.find((data:any)=>this.id=data.username);
-        console.log(this.id);
+        this.id=this.loginForm.value.username;
         sessionStorage.setItem('id',this.id);
-console.log(this.userdata.username);
 if(user){
-
           alert("Login Successfull");
             sessionStorage.setItem('username',JSON.stringify(this.userdata.username));
             if(this.loginForm.value.username==='Vasu')
             sessionStorage.setItem('userrole','admin');
-            this.router.navigate(['home']);
+            if(this.targeturl){
+              this.router.navigateByUrl(this.targeturl);
+            }
+            else{
+            this.router.navigate(['home']);}
         }else {
           alert("Invalid credentials.");
         }

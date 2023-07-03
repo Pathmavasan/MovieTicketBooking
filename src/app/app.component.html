@@ -16,7 +16,7 @@
 
   <nav>
         <ul class="nav_links">
-        <button (click)="openLocationPopup()" class="button"> Location</button>
+        <button (click)="openLocationPopup()" [ngStyle]="{'backdrop-filter':showLocationPopup?'blur(20px)':'blur(0px)'}" class="button"> Location</button>
         <app-location *ngIf="showLocationPopup" (locationSelected)="handleLocationSelected($event)" (popupClosed)="handlePopupClosed()"></app-location>
 
         </ul>
@@ -25,8 +25,8 @@
 
   <a class="cta" role="button" *ngIf="registerService.isloogedin()" routerLink="home">Home</a>
   <a class="cta" role="button" *ngIf="!registerService.isloogedin()" routerLink="login"> Login</a>
-  <a class="cta" role="button" *ngIf="(registerService.isloogedin()&&(registerService.GetUserRole()))" routerLink="admin/addmovie"> Add Movie</a>
-  <a class="cta" role="button" *ngIf="(registerService.isloogedin()&&(registerService.GetUserRole()))" routerLink="admin/deletemovie"> Delete Movie</a>
+  <a class="cta" role="button" *ngIf="(registerService.isloogedin()&&(registerService.GetUserRole()))" routerLink="addmovie"> Add Movie</a>
+  <a class="cta" role="button" *ngIf="(registerService.isloogedin()&&(registerService.GetUserRole()))" routerLink="deletemovie"> Delete Movie</a>
   <a class="cta" role="button" *ngIf="registerService.isloogedin()"  (click)="registerService.logoutuser()">Logout</a>
 
 </header>

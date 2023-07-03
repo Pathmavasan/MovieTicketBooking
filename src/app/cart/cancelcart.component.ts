@@ -20,7 +20,7 @@ this.registerService.deletecart(id).subscribe(res=>{
 
 });
 seatid.forEach((seat:any) => {
-  this.registerService.unreserveSeat(seat).subscribe(res=>{
+  this.registerService.unreserveSeat(sessionStorage.getItem('moviename'),sessionStorage.getItem('ShowDate'),sessionStorage.getItem('Timing'),seat).subscribe(res=>{
 
   })
 });

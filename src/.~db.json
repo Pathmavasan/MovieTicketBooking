@@ -201,6 +201,23 @@
       "ShowTime": "10.00",
       "ShowDate": "30-06-2023",
       "id": 11
+    },
+    {
+      "cardNumber": "1234567890098765",
+      "expirationDate": "2023-07",
+      "cvv": "123",
+      "cardHolderName": "Pathmavasan",
+      "Price": "",
+      "username": "Vasu",
+      "MovieName": "Takkar",
+      "selectedseats": [
+        17,
+        18
+      ],
+      "Time": "6/30/2023, 3:15:18 PM",
+      "ShowTime": "02.00PM",
+      "ShowDate": "01-07-2023",
+      "id": 12
     }
   ],
   "30-06-2023-10.00-Takkar": [
@@ -5227,7 +5244,7 @@
       "id": 17,
       "row": 1,
       "column": 17,
-      "reserved": false,
+      "reserved": true,
       "price": 200
     },
     {

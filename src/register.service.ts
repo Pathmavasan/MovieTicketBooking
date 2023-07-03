@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RegisterService {
+  offerEnd: Date = new Date('2023-06-30T21:44:59');
+  discountPercentage: number=50;
   baseUrl="http://localhost:3000/Register";
   MovieUrl="http://localhost:3000/Movie";
   PaymentURL="http://localhost:3000/payment"
@@ -65,22 +67,27 @@ logoutuser(){
    sessionStorage.clear();
    this.router.navigate(["/home"]);
 }
-getSeats(body:any): Observable<any> {
+getSeats(body:any,date:any,time:any): Observable<any> {
   const url="http://localhost:3000";
-  return this.client.get<any>(`${url}/${body}`);
+  const data=date+"-"+time+"-"+body;
+  return this.client.get<any>(`${url}/${data}`);
 }
 getSelectedSeat(body:any){
   return this.client.get("http://localhost:3000/seat?id="+body);
 }
 
-reserveSeat(date:any,seatId: number): Observable<any> {
-  const url=`${"http://localhost:3000"}/${date}`
-  const updateUrl = `${url}/${seatId}`;
+reserveSeat(Body:any,date:any,Time:any,seatId: number): Observable<any> {
+  const url="http://localhost:3000";
+  const data=date+"-"+Time+"-"+Body;
+  const url1=`${url}/${data}`
+  const updateUrl = `${url1}/${seatId}`;
   return this.client.patch<any>(updateUrl, { reserved: true });
 }
-unreserveSeat(seatId: number): Observable<any> {
-
-  const updateUrl = `${"http://localhost:3000/seat"}/${seatId}`;
+unreserveSeat(Body:any,date:any,Time:any,seatId: number): Observable<any> {
+  const url="http://localhost:3000";
+  const data=date+"-"+Time+"-"+Body;
+  const url1=`${url}/${data}`
+  const updateUrl = `${url1}/${seatId}`;
   return this.client.patch<any>(updateUrl, { reserved: false });
 }
 }
