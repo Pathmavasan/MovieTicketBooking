@@ -27,7 +27,7 @@
     <div class="form-group">
 
       <input type="text" name="Image" class='text' placeholder="Image URL or uploadImage"  formControlName="Image"  >
-      <input type="file" formControlName="Image" >
+      <input type="file" (change)="getfile($event)" formControlName="Image1"  >
     </div>
     <div class="error" *ngIf="addForm.controls['Image'].invalid&&addForm.controls['Image'].touched">
       <small *ngIf="addForm.controls['Image'].errors?.['required']">Iamge url is required</small>

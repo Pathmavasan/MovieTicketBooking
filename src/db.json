@@ -70,137 +70,6 @@
   "payment": [
     {
       "id": 1
-    },
-    {
-      "cardNumber": "3952637642963423",
-      "expirationDate": "2023-06",
-      "cvv": "111",
-      "cardHolderName": "111",
-      "Price": "600",
-      "username": "Pathu",
-      "MovieName": "Takkar",
-      "selectedseats": [
-        13,
-        11,
-        12
-      ],
-      "Time": "6/29/2023, 8:23:52 AM",
-      "ShowTime": "02.00PM",
-      "ShowDate": "30-06-2023",
-      "id": 3
-    },
-    {
-      "cardNumber": "1234567890098765",
-      "expirationDate": "2023-04",
-      "cvv": "123",
-      "cardHolderName": "Pathmavasan",
-      "Price": "1600",
-      "username": "Vasu",
-      "MovieName": "Takkar",
-      "selectedseats": [
-        51,
-        52,
-        32,
-        31
-      ],
-      "Time": "6/29/2023, 8:52:17 PM",
-      "ShowTime": "10.00",
-      "ShowDate": "30-06-2023",
-      "id": 5
-    },
-    {
-      "cardNumber": "1234567890098765",
-      "expirationDate": "2023-06",
-      "cvv": "121",
-      "cardHolderName": "Pathmavasan",
-      "Price": "200",
-      "username": "Vasu",
-      "MovieName": "Takkar",
-      "selectedseats": [
-        11
-      ],
-      "Time": "6/29/2023, 8:58:26 PM",
-      "ShowTime": "10.00",
-      "ShowDate": "30-06-2023",
-      "id": 6
-    },
-    {
-      "cardNumber": "1234567890098765",
-      "expirationDate": "2023-06",
-      "cvv": "111",
-      "cardHolderName": "Pathmavasan",
-      "Price": "400",
-      "username": "Vasu",
-      "MovieName": "Veeran",
-      "selectedseats": [
-        2,
-        3
-      ],
-      "Time": "6/29/2023, 9:00:49 PM",
-      "ShowTime": "10.00",
-      "ShowDate": "30-06-2023",
-      "id": 7
-    },
-    {
-      "cardNumber": "1234567890098765",
-      "expirationDate": "2023-06",
-      "cvv": "111",
-      "cardHolderName": "Pathmavasan",
-      "Price": "400",
-      "username": "Vasu",
-      "MovieName": "Transformers: Rise of the Beasts",
-      "selectedseats": [
-        9,
-        10
-      ],
-      "Time": "6/29/2023, 9:24:47 PM",
-      "ShowTime": "02.00PM",
-      "ShowDate": "01-07-2023",
-      "id": 8
-    },
-    {
-      "cardNumber": "1234566543211234",
-      "expirationDate": "2023-08",
-      "cvv": "111",
-      "cardHolderName": "Pathmavasan",
-      "Price": "",
-      "username": "Vasu",
-      "MovieName": "Takkar",
-      "selectedseats": [
-        12
-      ],
-      "Time": "6/29/2023, 9:34:36 PM",
-      "ShowTime": "10.00",
-      "ShowDate": "30-06-2023",
-      "id": 9
-    },
-    {
-      "cardNumber": "1234432112344321",
-      "expirationDate": "2023-06",
-      "cvv": "222",
-      "cardHolderName": "qwqwq",
-      "Price": "400",
-      "username": "Vasu",
-      "MovieName": "Por Thozhil",
-      "selectedseats": [],
-      "Time": "6/29/2023, 9:42:17 PM",
-      "ShowTime": "10.00",
-      "ShowDate": "30-06-2023",
-      "id": 10
-    },
-    {
-      "cardNumber": "1010101091929192",
-      "expirationDate": "2023-06",
-      "cvv": "112",
-      "cardHolderName": "Pathmavasan",
-      "Price": "",
-      "username": "Vasu",
-      "MovieName": "Por Thozhil",
-      "selectedseats": [],
-      "Time": "6/29/2023, 9:43:25 PM",
-      "ShowTime": "10.00",
-      "ShowDate": "30-06-2023",
-      "id": 11
     }
   ],
   "30-06-2023-10.00-Takkar": [
@@ -3093,7 +2962,7 @@
       "price": 200
     },
     {
-      "reserved": false,
+      "reserved": true,
       "row": 1,
       "column": 13,
       "id": 13,
@@ -3236,21 +3105,21 @@
       "id": 33,
       "row": 2,
       "column": 13,
-      "reserved": false,
+      "reserved": true,
       "price": 200
     },
     {
       "id": 34,
       "row": 2,
       "column": 14,
-      "reserved": false,
+      "reserved": true,
       "price": 200
     },
     {
       "id": 35,
       "row": 2,
       "column": 15,
-      "reserved": false,
+      "reserved": true,
       "price": 200
     },
     {

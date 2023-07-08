@@ -31,6 +31,8 @@ export class PaymentComponent {
   MovieTime=sessionStorage.getItem('Timing');
   Price:any=sessionStorage.getItem('price1');
   remainingTime: any='';
+  showcreditcard:boolean=false;
+  showdebitcard:boolean=false;
   ngOnInit() {
 this.calculateRemainingTime();
 setTimeout(() => {
@@ -39,6 +41,14 @@ setTimeout(() => {
 interval(1000).subscribe(() => {
   this.calculateRemainingTime();
 });
+}
+creditcard(){
+  this.showcreditcard=true;
+  this.showdebitcard=false;
+}
+debitcard(){
+  this.showcreditcard=false;
+  this.showdebitcard=true;
 }
 calculateRemainingTime() {
   const currentDate = new Date();

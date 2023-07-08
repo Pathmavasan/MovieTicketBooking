@@ -16,7 +16,7 @@
 
   <nav>
         <ul class="nav_links">
-        <button (click)="openLocationPopup()" [ngStyle]="{'backdrop-filter':showLocationPopup?'blur(20px)':'blur(0px)'}" class="button"> Location</button>
+        <button (click)="openLocationPopup()" class="button"> Location</button>
         <app-location *ngIf="showLocationPopup" (locationSelected)="handleLocationSelected($event)" (popupClosed)="handlePopupClosed()"></app-location>
 
         </ul>

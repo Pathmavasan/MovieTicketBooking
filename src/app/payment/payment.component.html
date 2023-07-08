@@ -12,6 +12,10 @@
 </div>
 <div class="paymentdetail">
 <div class="payment">
+  <input type="checkbox" (click)="creditcard()">creditcard
+  <app-creditcard *ngIf="showcreditcard"></app-creditcard>
+  <input type="checkbox" (click)="debitcard()">creditcard
+  <app-debitcard *ngIf="showdebitcard"></app-debitcard>
   <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
     <div>
       <label for="cardNumber">Card Number</label>

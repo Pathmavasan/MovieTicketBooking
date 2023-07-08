@@ -14,10 +14,15 @@ export class AddmovieComponent {
 
   ngOnInit() {
   }
+  file:any;
+  getfile(event:any){
+    this.file=event.target.files[0];
+  }
   addForm=this.fb.group({
     MovieName:this.fb.control('',[Validators.required]),
     Type:this.fb.control('',[Validators.required]),
     Image:this.fb.control(''),
+    Image1:this.fb.control(''),
     About:this.fb.control('',[Validators.required]),
     Ratting:this.fb.control('',[Validators.required]),
     vedio:this.fb.control('',[Validators.required])

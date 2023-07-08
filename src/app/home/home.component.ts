@@ -1,8 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { LoginComponent } from '../login/login.component';
-import { HttpClient } from '@angular/common/http';
 import { RegisterService } from 'src/register.service';
 import { Router } from '@angular/router';
 @Component({

@@ -63,7 +63,7 @@ constructor(private router:Router,public registerService:RegisterService,public 
         seconds: seconds
       };
     } else {
-      this.remainingTime = null; // Offer has ended
+      this.remainingTime = null; 
     }
   }
   onAnimationEnd() {

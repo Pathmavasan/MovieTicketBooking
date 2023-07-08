@@ -17,6 +17,8 @@ import { SeatComponent } from './seat/seat.component';
 import { PaymentComponent } from './payment/payment.component';
 import { CancelcartComponent } from './cart/cancelcart.component';
 import { PopupmessageComponent } from './popupmessage/popupmessage.component';
+import { CreditcardComponent } from './payment/paymentcard/creditcard/creditcard.component';
+import { DebitcardComponent } from './payment/paymentcard/debitcard/debitcard.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { PopupmessageComponent } from './popupmessage/popupmessage.component';
     PaymentComponent,
     CancelcartComponent,
     PopupmessageComponent,
+    CreditcardComponent,
+    DebitcardComponent,
 
 
   ],
