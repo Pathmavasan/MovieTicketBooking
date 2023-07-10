@@ -31,6 +31,7 @@ export class PaymentComponent {
   MovieTime=sessionStorage.getItem('Timing');
   Price:any=sessionStorage.getItem('price1');
   remainingTime: any='';
+  checkcreditcard:boolean=false;
   showcreditcard:boolean=false;
   showdebitcard:boolean=false;
   ngOnInit() {
@@ -45,6 +46,7 @@ interval(1000).subscribe(() => {
 creditcard(){
   this.showcreditcard=true;
   this.showdebitcard=false;
+  this.checkcreditcard=true;
 }
 debitcard(){
   this.showcreditcard=false;

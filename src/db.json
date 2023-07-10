@@ -67,8 +67,44 @@
       "id": 4
     }
   ],
+  "seat": [
+    {
+      "id": 1,
+      "Takkar": [
+        {
+          "id": 2,
+          "10-09-2023": [
+            {
+              "id": "a",
+              "data": "ryry"
+            }
+          ]
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        }
+      ]
+    }
+  ],
   "payment": [
     {
+      "cardNumber": "8100152967626762",
+      "expirationDate": "2023-07",
+      "cvv": "123",
+      "cardHolderName": "Pathmavasan",
+      "Price": "",
+      "username": "Vasu",
+      "MovieName": "Por Thozhil",
+      "selectedseats": [
+        35,
+        15
+      ],
+      "Time": "10/7/2023, 12:39:27 pm",
+      "ShowTime": "02.00PM",
+      "ShowDate": "01-07-2023",
       "id": 1
     }
   ],
@@ -37325,7 +37361,7 @@
       "price": 200
     },
     {
-      "reserved": false,
+      "reserved": true,
       "row": 1,
       "column": 15,
       "id": 15,
@@ -37468,7 +37504,7 @@
       "id": 35,
       "row": 2,
       "column": 15,
-      "reserved": false,
+      "reserved": true,
       "price": 200
     },
     {
