@@ -33,7 +33,7 @@ export class DebitcardComponent {
   MovieName=sessionStorage.getItem('moviename');
   Date=sessionStorage.getItem('ShowDate');
   MovieTime=sessionStorage.getItem('Timing');
-  Price:any=sessionStorage.getItem('price1');
+  Price=sessionStorage.getItem('price1');
 
   ngOnInit() {
 
@@ -45,7 +45,7 @@ paymentForm = this.formBuilder.group({
   expirationDate: ['', [Validators.required]],
   cvv: ['', [Validators.required, Validators.pattern(/^\d{3}$/)]],
   cardHolderName: ['', Validators.required],
-  Price:this.discountprice,
+  Price:this.Price,
   username:sessionStorage.getItem('id'),
   MovieName:sessionStorage.getItem('moviename'),
   selectedseats:this.seatid,

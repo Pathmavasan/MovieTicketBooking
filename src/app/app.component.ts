@@ -63,7 +63,7 @@ constructor(private router:Router,public registerService:RegisterService,public 
         seconds: seconds
       };
     } else {
-      this.remainingTime = null; 
+      this.remainingTime = null;
     }
   }
   onAnimationEnd() {
@@ -89,6 +89,9 @@ showLocationPopup: boolean = false;
 
   handlePopupClosed(): void {
     this.showLocationPopup = false;
+  }
+  home(){
+    this.router.navigate([""])
   }
 }
 

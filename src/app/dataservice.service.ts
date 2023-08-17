@@ -5,6 +5,9 @@ import{Seat} from 'src/app/seat/seat.component';
   providedIn: 'root'
 })
 export class DataserviceService {
+  toLowerCase(): any {
+    throw new Error('Method not implemented.');
+  }
 Seat:any[]=[];
   constructor() { }
   private selectedSeatsSubject = new BehaviorSubject<Seat[]>([]);
@@ -19,5 +22,10 @@ Price=0;
   getSelectedSeats(): Seat[] {
     return this.selectedSeatsSubject.value;
   }
+  private searchSubject = new BehaviorSubject<string>('');
+  public search = this.searchSubject.asObservable();
 
+  updateSearchTerm(term: string) {
+    this.searchSubject.next(term);
+  }
 }

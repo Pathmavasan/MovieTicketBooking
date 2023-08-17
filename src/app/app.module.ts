@@ -19,6 +19,7 @@ import { CancelcartComponent } from './cart/cancelcart.component';
 import { PopupmessageComponent } from './popupmessage/popupmessage.component';
 import { CreditcardComponent } from './payment/paymentcard/creditcard/creditcard.component';
 import { DebitcardComponent } from './payment/paymentcard/debitcard/debitcard.component';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { DebitcardComponent } from './payment/paymentcard/debitcard/debitcard.co
     CancelcartComponent,
     PopupmessageComponent,
     CreditcardComponent,
-    DebitcardComponent,
+    DebitcardComponent
 
 
   ],
@@ -46,7 +47,12 @@ import { DebitcardComponent } from './payment/paymentcard/debitcard/debitcard.co
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoggerModule.forRoot({
+      serverLoggingUrl: '/api/logs',
+      level: NgxLoggerLevel.DEBUG,
+      serverLogLevel: NgxLoggerLevel.ERROR
+    }),
     ],
   providers: [],
   bootstrap: [AppComponent]

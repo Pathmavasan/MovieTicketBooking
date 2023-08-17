@@ -1,4 +1,6 @@
-
+body{
+ background-color: steelblue;
+}
 li,a{
   font-weight: 500;
   font-size: 16px;
@@ -8,9 +10,11 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: -0.5%;
+  margin-bottom:0.5% ;
   padding: 10px 20px;
   background-color: rgba(22, 20, 20, 0.986);
-  border-radius: 20px;
+
 }
 #logo{
   cursor: pointer;
@@ -19,7 +23,7 @@ header{
 
 }
 #search{
-  margin-left: 30px;
+  margin-left: 10px;
   color: rgba(22, 20, 20, 0.986);
   cursor: pointer;
  flex:1;
@@ -39,9 +43,19 @@ header{
   font-weight: 300px;
   transition: all 0.3s ease 0s;
 }
-
+span a{
+  justify-content: space-between;
+  margin:1px;
+}
+header span a {
+  display: inline-block;
+  flex-direction: row;
+  flex-flow: row;
+align-items: center;
+}
 
 header a{
+
 margin:10px;
   padding: 10px 20px;
   background-color: rgba(0,136,169,1);
@@ -52,11 +66,11 @@ margin:10px;
  transition: all 0.3s ease 0s;
 }
 footer{
-  margin: 0;
+  margin: -0.5%;
+  margin-top:0.5% ;
   padding:0;
   box-sizing: border-box;
   background-color: rgba(22, 20, 20, 0.986);
-  border-radius: 30px;
 }
 .foter{
   padding: 40px 0;
@@ -124,7 +138,7 @@ color:aliceblue;
   padding: 10px;
   font-size: 24px;
   text-align: center;
-  z-index: 9999;
+  z-index: 999;
   display:inline-block;
 }
 .flash-message p{
@@ -166,4 +180,83 @@ color:aliceblue;
 
 .timer-value {
   font-size: 14px;
+}
+#home{
+  background-color: none;
+  border-color: none;
+
+}
+.admin-menu{
+z-index: 9999;
+}
+/* Hamburger Checkbox Styles */
+.hamburger-checkbox {
+  display: none;
+  z-index: 9999;
+  color:red;
+}
+
+.hamburger-label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-checkbox:checked + .hamburger-label .hamburger-icon {
+  transform: rotate(45deg);
+}
+
+.hamburger-checkbox:checked + .hamburger-label .hamburger-icon:before {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  top: 10px;
+  transform: rotate(-90deg);
+}
+
+.hamburger-checkbox:checked + .hamburger-label .hamburger-icon:after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  top: 10px;
+  transform: rotate(90deg);
+}
+
+/* Menu Styles */
+.menu {
+  display: none;
+
+}
+
+.hamburger-checkbox:checked ~ .menu {
+  display: block;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }

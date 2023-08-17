@@ -9,20 +9,32 @@ import { RegisterService } from 'src/register.service';
   styleUrls: ['./addmovie.component.css']
 })
 export class AddmovieComponent {
-
+imageurl:any='';
   constructor(private registerService:RegisterService,private fb:FormBuilder,private router:Router) { }
 
   ngOnInit() {
   }
   file:any;
   getfile(event:any){
-    this.file=event.target.files[0];
+    const selectedFile=event.target.files[0];
+    this.uploadImage(selectedFile);
+  }
+  uploadImage(file:File){
+    const reader=new FileReader();
+    reader.onload=(e:any)=>{
+      const imageUrl=e.target.result;
+      this.imageurl=imageUrl;
+      console.log(this.imageurl);
+      const imageControl = this.addForm.get('Image');
+      if (imageControl) {
+        imageControl.setValue(this.imageurl);
+      }    };
+    reader.readAsDataURL(file);
   }
   addForm=this.fb.group({
-    MovieName:this.fb.control('',[Validators.required]),
+    Name:this.fb.control('',[Validators.required]),
     Type:this.fb.control('',[Validators.required]),
-    Image:this.fb.control(''),
-    Image1:this.fb.control(''),
+    Image:this.fb.control('',[Validators.required]),
     About:this.fb.control('',[Validators.required]),
     Ratting:this.fb.control('',[Validators.required]),
     vedio:this.fb.control('',[Validators.required])

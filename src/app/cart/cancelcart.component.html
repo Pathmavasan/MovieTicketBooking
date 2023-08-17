@@ -3,7 +3,6 @@
   <div><h2>Movie Name: {{data.MovieName}}</h2></div>
   <div><h2>Date:{{data.ShowDate}}</h2></div>
   <div><h2>Time:{{data.ShowTime}}</h2></div>
-  <div><h2>Cost:{{data.Price}}</h2></div>
   <span *ngFor="let seat of data.selectedseats" class="seat">{{seat}}</span>
   <div>
     <button (click)="Deletecart(data.id,data.selectedseats) " >Cancel Ticket</button>

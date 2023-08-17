@@ -30,11 +30,12 @@ export class LoginComponent {
         this.userdata=res;
         const user=this.userdata.find((data:any)=>data.username===this.loginForm.value.username&&data.password===this.loginForm.value.password);
         this.id=this.loginForm.value.username;
+        const role=this.userdata.find((data:any)=>data.role==='admin')
         sessionStorage.setItem('id',this.id);
 if(user){
           alert("Login Successfull");
             sessionStorage.setItem('username',JSON.stringify(this.userdata.username));
-            if(this.loginForm.value.username==='Vasu')
+            if(role)
             sessionStorage.setItem('userrole','admin');
             if(this.targeturl){
               this.router.navigateByUrl(this.targeturl);

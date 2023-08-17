@@ -11,10 +11,10 @@
   <form [formGroup]="addForm" (submit)="addMovieForm()">
     <div class="form-group">
 
-      <input type="text" name="MovieName" class='text' placeholder="Movie Name" formControlName='MovieName' required >
+      <input type="text" name="Name" class='text' placeholder="Movie Name" formControlName='Name' required >
     </div>
-    <div class="error" *ngIf="addForm.controls['MovieName'].invalid&&addForm.controls['MovieName'].touched">
-      <small *ngIf="addForm.controls['MovieName'].errors?.['required']">Username is required</small>
+    <div class="error" *ngIf="addForm.controls['Name'].invalid&&addForm.controls['Name'].touched">
+      <small *ngIf="addForm.controls['Name'].errors?.['required']">Username is required</small>
     </div>
     <div class="form-group">
 
@@ -26,13 +26,13 @@
     </div>
     <div class="form-group">
 
-      <input type="text" name="Image" class='text' placeholder="Image URL or uploadImage"  formControlName="Image"  >
-      <input type="file" (change)="getfile($event)" formControlName="Image1"  >
+      <input type="file" name="Image" (change)="getfile($event)" accept="image/*" formControlName="Image"  >
     </div>
     <div class="error" *ngIf="addForm.controls['Image'].invalid&&addForm.controls['Image'].touched">
-      <small *ngIf="addForm.controls['Image'].errors?.['required']">Iamge url is required</small>
+      <small *ngIf="addForm.controls['Image'].errors?.['required']">Image is required</small>
 
-    </div><div class="form-group">
+    </div>
+    <div class="form-group">
 
       <input type="text" name="About" class='text' placeholder="Description" formControlName="About" required >
     </div>

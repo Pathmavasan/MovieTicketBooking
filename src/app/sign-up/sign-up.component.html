@@ -23,7 +23,7 @@
     </div>
     <div class="error" *ngIf="registerForm.controls['mobileno'].invalid&&registerForm.controls['mobileno'].touched">
       <small *ngIf="registerForm.controls['mobileno'].errors?.['required']">Mobile number is required</small>
-      <small *ngIf="registerForm.controls['mobileno'].errors?.['pattern']">Mobile number is in valid</small>
+      <small *ngIf="registerForm.controls['mobileno'].errors?.['pattern']">Mobile number is invalid</small>
     </div>
     <div class="form-group">
 

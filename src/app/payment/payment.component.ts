@@ -61,7 +61,6 @@ calculateRemainingTime() {
     this.remainingTime={price:this.discountprice};
   }
 else{
-  this.discountprice=this.Price;
   this.remainingTime=null;
 }}
 
@@ -70,7 +69,7 @@ paymentForm = this.formBuilder.group({
   expirationDate: ['', [Validators.required]],
   cvv: ['', [Validators.required, Validators.pattern(/^\d{3}$/)]],
   cardHolderName: ['', Validators.required],
-  Price:this.discountprice,
+  Price:this.Price,
   username:sessionStorage.getItem('id'),
   MovieName:sessionStorage.getItem('moviename'),
   selectedseats:this.seatid,
@@ -79,29 +78,5 @@ paymentForm = this.formBuilder.group({
   ShowDate:sessionStorage.getItem('ShowDate')
 });
 
-onSubmit() {
-  if (this.paymentForm.invalid) {
-    return;
-  }
 
- const encryptedPayment = this.encryptPayment(this.paymentForm.value);
-
-
-  this.seatid.forEach((seatId: number)=>{
-  this.registerService.reserveSeat(sessionStorage.getItem('moviename'),sessionStorage.getItem('ShowDate'),sessionStorage.getItem('Timing'),seatId).subscribe((res)=>{
-    console.log("reseved seat"+res.id);
-  })})
-  this.registerService.processPayment(this.paymentForm.value).subscribe(res => {
-    console.log(res);
-      }
-      );
-      alert('Payment done ');
-      this.router.navigate(['cart']);
-  this.paymentForm.reset();
-}
-
-encryptPayment(payment: any): string {
-  return JSON.stringify(payment);
-
-}
 }

@@ -126,9 +126,10 @@ a{
 	max-width:100%;
 }
 /* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
+@media screen and (max-width:1250px) {
+
   .column {
-    width: 100%;
+    width: 350px;
     display: block;
     margin-bottom: 20px;
 

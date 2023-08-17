@@ -1,24 +1,36 @@
+<div class="super-containe">
+<div id="warpper">
 <div class="container">
-
+<section class="col-md-4">
 <div class="row" *ngFor="let movie of moviedetail">
-  <div class="col-md-4">
+  <div class="frame">
+    <section class="ved">
     <iframe width="560" height="315" [src]="safeurl"></iframe>
-  </div>
+  </section>
 
   <div class="col-md-8">
     <h1 class="movie-title">{{movie.Name}}</h1>
-    <p class="movie-info">{{movie.MovieType}}</p>
     <div class="rating">
-    <h3><b>
-          <i class="fa-solid fa-star" style="color:#f7f406;font-size:1em;"></i>
-          <span>{{movie.Ratting}}</span>
-          </b></h3>
-          </div>
-    <p class="movie-description"> {{movie.About}}</p>
+      <h3><b>
+            <i class="fa-solid fa-star" style="color:#f7f406;font-size:1em;"></i>
+            <span>{{movie.Ratting}}</span>
+            </b></h3>
+            </div>
+    <p class="movie-info">{{movie.Type}}</p>
+
     <div >
  <button class="btn-primary" [routerLink]="['/seat']" routerLinkActive="router-link-active"
- >Book Now</button>
+ ><span style="font-weight: 500; font-size: 16px; color: rgb(255, 255, 255);">Book tickets</span></button>
     </div>
   </div>
+</div>
+
+
+</div>
+</section>
+<div class="row" *ngFor="let movie of moviedetail">
+<p class="movie-description"> {{movie.About}}</p>
+</div>
+</div>
 </div>
 </div>

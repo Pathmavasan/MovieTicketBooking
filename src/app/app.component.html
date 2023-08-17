@@ -4,8 +4,8 @@
 </head>
 <header>
 
-  <h1 id="logo">{{Title}}</h1>
-  <input type="text" placeholder="Search Movie" name="search"  id="search">
+ <h1 id="logo" (click)=home()>{{Title}}</h1>
+  <input type="text" placeholder="Search Movie" name="search"  id="search" [(ngModel)]="Search">
   <div class="flash-message" id="flash-message" [@fadeOut]="visible ? 'visible' : 'void'" (@fadeOut.done)="onAnimationEnd()">
     <p>50% off on your ticket, Right time for your Experiance</p>
   </div>
@@ -17,19 +17,29 @@
   <nav>
         <ul class="nav_links">
         <button (click)="openLocationPopup()" class="button"> Location</button>
-        <app-location *ngIf="showLocationPopup" (locationSelected)="handleLocationSelected($event)" (popupClosed)="handlePopupClosed()"></app-location>
 
         </ul>
 
   </nav>
-
-  <a class="cta" role="button" *ngIf="registerService.isloogedin()" routerLink="home">Home</a>
+<span>
   <a class="cta" role="button" *ngIf="!registerService.isloogedin()" routerLink="login"> Login</a>
   <a class="cta" role="button" *ngIf="(registerService.isloogedin()&&(registerService.GetUserRole()))" routerLink="addmovie"> Add Movie</a>
   <a class="cta" role="button" *ngIf="(registerService.isloogedin()&&(registerService.GetUserRole()))" routerLink="deletemovie"> Delete Movie</a>
   <a class="cta" role="button" *ngIf="registerService.isloogedin()"  (click)="registerService.logoutuser()">Logout</a>
-
+</span>
 </header>
+<app-location *ngIf="showLocationPopup" (locationSelected)="handleLocationSelected($event)" (popupClosed)="handlePopupClosed()"></app-location>
+
+
+<nav class="menu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
 
 <router-outlet></router-outlet>
 

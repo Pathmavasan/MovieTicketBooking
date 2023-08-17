@@ -2,12 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-
 @Injectable({
   providedIn: 'root'
 })
 export class RegisterService {
-  offerEnd: Date = new Date('2023-06-30T21:44:59');
+  offerEnd: Date = new Date('2023-07-18T21:44:59');
   discountPercentage: number=50;
   baseUrl="http://localhost:3000/Register";
   MovieUrl="http://localhost:3000/Movie";
@@ -65,7 +64,7 @@ deletecart(body:any){
 logoutuser(){
 
    sessionStorage.clear();
-   this.router.navigate(["/home"]);
+   this.router.navigate([""]);
 }
 getSeats(body:any,date:any,time:any): Observable<any> {
   const url="http://localhost:3000";
@@ -77,10 +76,13 @@ getSelectedSeat(body:any){
 }
 
 reserveSeat(Body:any,date:any,Time:any,seatId: number): Observable<any> {
+
   const url="http://localhost:3000";
   const data=date+"-"+Time+"-"+Body;
   const url1=`${url}/${data}`
+  console.log("URL"+url1);
   const updateUrl = `${url1}/${seatId}`;
+console.log("Upadte"+updateUrl);
   return this.client.patch<any>(updateUrl, { reserved: true });
 }
 unreserveSeat(Body:any,date:any,Time:any,seatId: number): Observable<any> {
