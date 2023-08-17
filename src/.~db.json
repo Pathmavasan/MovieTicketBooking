@@ -40249,7 +40249,7 @@
       "price": 200
     },
     {
-      "reserved": false,
+      "reserved": true,
       "row": 1,
       "column": 12,
       "id": 12,

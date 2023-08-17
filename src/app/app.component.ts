@@ -1,5 +1,5 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Component,HostBinding, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { interval } from 'rxjs/internal/observable/interval';
 import { RegisterService } from 'src/register.service';
@@ -25,7 +25,6 @@ import { TimerService } from './Service/timer.service';
 export class AppComponent implements OnInit {
   Title = "Book Your Show";
 Search: any="";
-  @Input()
   message!: string;
   visible: boolean = true;
 

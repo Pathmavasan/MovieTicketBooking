@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NGXLogger,TOKEN_LOGGER_CONFIG } from 'ngx-logger';
 import { CancelcartComponent } from './cancelcart.component';
 
 describe('CancelcartComponent', () => {
@@ -8,7 +8,11 @@ describe('CancelcartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CancelcartComponent ]
+      declarations: [ CancelcartComponent ],
+      providers:[NGXLogger,{provide:TOKEN_LOGGER_CONFIG,useValue:{
+        level: 'debug',
+      serverLogLevel: 'off',
+      disableConsoleLogging: false, }}]
     })
     .compileComponents();
 

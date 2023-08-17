@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http'
@@ -23,6 +23,7 @@ import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 @NgModule({
   declarations: [
+
     AppComponent,
     HomeComponent,
     LoginComponent,
@@ -37,7 +38,7 @@ import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
     CancelcartComponent,
     PopupmessageComponent,
     CreditcardComponent,
-    DebitcardComponent
+    DebitcardComponent,
 
 
   ],
@@ -55,6 +56,7 @@ import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
     }),
     ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
